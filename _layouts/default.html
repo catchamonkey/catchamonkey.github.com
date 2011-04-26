@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="title" content="{{ page.title }}" /> 
+    <meta name="robots" content="index, follow" /> 
+    <meta name="description" content="The blog of Chris Sedlmayr about symfony, php, open source technology and real world development" /> 
+    <meta name="keywords" content="symfony, php, framework, blog, web, open, source, development" /> 
+    <meta name="language" content="en" />
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+</head>
+<body>
+  <div id="container">
+    <header>
+        <h1>{{ page.title }}</h1>
+        {% if page.ispost %}
+        <h2><a href="/">Chris Sedlmayr</a></h2>
+        {% endif %}
+        {% if page.date %}
+        <p class="meta date">{{ page.date | date_to_string }}</p>
+        {% endif %}
+    </header>
+    <div>
+        {{ content }}
+    </div>
+    <footer>
+        &copy; 2010 - 2011 <a href="/" alt="Chris Sedlmayr" title="Chris Sedlmayr">Chris Sedlmayr</a> | <a href="/atom.xml">Atom</a>
+    </footer>
+  </div>
+</body>
+</html>
