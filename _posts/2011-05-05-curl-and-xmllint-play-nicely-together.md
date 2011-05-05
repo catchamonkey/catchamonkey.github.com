@@ -14,6 +14,6 @@ To do so, invoke curl, and parse the response through xmllint, giving xmllint th
 curl -sL "http://api.example.com/assets.xml" | xmllint --format -
 {% endhighlight %}
 
-The curl options I have used are -s to invoke silent mode, and -L so it follows redirects.
+The curl options used here are -s to invoke silent mode, and -L so it follows redirects.
 
 [Read more about xmllint here](http://xmlsoft.org/xmllint.html "Read more about xmllint here") or view the man pages directly if you have it installed.
