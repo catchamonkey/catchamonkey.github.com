@@ -84,8 +84,7 @@ footer {
 }
 p {
     margin-top:10px;
-    font-size: 14px;
-
+    font-size: 15px;
 }
 p.meta {
     text-align: center;
@@ -93,11 +92,9 @@ p.meta {
 pre {
     padding:10px;
     margin: 5px 0px;
-    background-color: #aaaaaa;
-    border: 2px solid #aaaaaa;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    background-color: #000000;
+    font-family: monospace;
+    font-size: 15px;
 }
 #main a {
     text-decoration: underline;

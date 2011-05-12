@@ -5,6 +5,7 @@ date: 30th June 2010
 excerpt: We can use the Textmate environment variables, along with a small bit of PHP to automatically insert class names based on the folder directory structure
 ---
 The title says it all so i'll just get on with it.  
+
 Create a new textmate command, and set the output to 'Insert as snippet'  
 Paste in the following.
 {% highlight php %}
@@ -41,7 +42,9 @@ Then iterates through the array, creating a textmate snippet placeholder for eac
 
 So for a file that is in the path /The/Full/Path/Filename.php  
 We end up with the resulting snippet of  
+{% highlight php %}
 ${1:The_}${2:Full_}${3:Path_}${4:Filename}
+{% endhighlight %}
 
 Which then enables you to tab through them and remove those from the start that you don't need.  
 You could go a step further and only spit out the last 3 parts as that is generally how many are needed for a class name. But it really depends on your app structure so I've left it as is for now.  
