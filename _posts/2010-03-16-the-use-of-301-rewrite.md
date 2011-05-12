@@ -20,7 +20,7 @@ Within you VirtualHost entry you need to specify a ServerAlias. So I would have
 ServerName www.sedlmayr.co.uk
 ServerAlias sedlmayr.co.uk
 {% endhighlight %}
-And then within your projects .htaccess file you would put
+And then within the vhost file for your project you would have
 
 {% highlight apache %}
 RewriteCond %{HTTP_HOST} ^sedlmayr\.co.uk
