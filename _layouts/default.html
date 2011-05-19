@@ -46,11 +46,14 @@
        Copyright Infinity Tracking 2011
        www.Infinity-Tracking.com -->
   <script type="text/javascript">
-      var ictigrp = '77'; // Installation ID
+      var _ictt = _ictt || [];
+      _ictt.push(['_setIgrp', '77']);
+      _ictt.push(['_track']);
       (function() {
-          var ictsource = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.infinity-tracking.net/nas/js/nas.v1.min.js';
-          document.write(unescape("%3Cscript src='" + ictsource + "' type='text/javascript'%3E%3C/script%3E"));
-      })();
+          var ict = document.createElement('script'); ict.type = 'text/javascript'; ict.async = true;
+          ict.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.infinity-tracking.net/nas/js/nas.v2.js';
+          var scr = document.getElementsByTagName('script')[0]; scr.parentNode.insertBefore(ict, scr);
+        })();
   </script>
   <!-- Infinity Tracking Code End -->
 </body>
