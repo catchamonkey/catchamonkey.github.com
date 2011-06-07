@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+ol, ul {
+    margin-top: 10px;
+}
+
 div#container {
     width: 800px;
     margin: 0 auto;
