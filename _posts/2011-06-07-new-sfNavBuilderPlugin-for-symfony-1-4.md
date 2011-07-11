@@ -18,8 +18,58 @@ This therefore allows you to say you want an item to be active if;
     module = blogPost
     action = show
     a paramName of post_id = a paramValue of 1
-    
-I have included some examples of use within the readme of the project, but am happy to answer question you have when using it.
+
+###Basic usage example
+
+One main menu item, with 2 child items  
+
+{% highlight php %}
+    <?php
+    // create a menu item for the about page
+    $homepage = new sfNavBuilderItem();
+    $homepage
+        ->setDisplayName('About Us')
+        ->setUrl(url_for('about'))
+        ->addActivateWhen(array(
+            'module' => array('about'),
+            'action' => array('index')
+        ));
+    // create a menu item for the about the team page and define the parent
+    $team = new sfNavBuilderItem();
+    $team
+        ->setDisplayName('About the Team')
+        ->setUrl(url_for('aboutTeam'))
+        ->addActivateWhen(array(
+            'module' => array('about'),
+            'action' => array('team')
+        ))
+        ->setParent($homepage);
+    // create a menu item for the about the company page and define the parent
+    $company = new sfNavBuilderItem();
+    $company
+        ->setDisplayName('About the Company')
+        ->setUrl(url_for('aboutCompany'))
+        ->addActivateWhen(array(
+            'module' => array('about'),
+            'action' => array('company')
+        ))
+        ->setParent($homepage);
+
+    // put the items into a menu instance and provide the required info
+    $this->menu = new sfNavBuilder();
+    $this->menu
+        ->setRequest($request)
+        ->setModule($this->getContext()->getModuleName())
+        ->setAction($this->getContext()->getActionName())
+        ->addItem($homepage);
+
+    // in your template you can then call the renderer
+    <?php echo $menu->render(); ?>
+    // check out the sfNavBuilderRenderer class to see what this does
+{% endhighlight %}
+
+
+I have included some fuller examples of use within the readme of the project, but am happy to answer question you have when using it.
 
 [Project page on github](https://github.com/catchamonkey/sfNavBuilderPlugin "Project page on github")  
 [sfNavBuilderPlugin Project site](http://catchamonkey.github.com/sfNavBuilderPlugin "sfNavBuilderPlugin Project site")
