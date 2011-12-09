@@ -11,7 +11,7 @@ You can read all about the book over at [addyosmani.com](http://addyosmani.com/b
 
 I've converted it for Kindle compatibility, and it's provided here as a download (with permission from Addy of course).
 
-<a href="/downloads/Essential JavaScript Design Patterns For Beginners - Addy Osmani.mobi" onClick="_gaq.push(['_trackEvent','PDF','Download','AddyOsmaniJavaScriptKindleEBook']); __NAS.trig('DOWNLOAD', {'t':'Addy Osmani JavaScript Kindle eBook'});" target="_blank">Download Essential JavaScript and jQuery design patterns for Kindle</a>  
+<a href="/downloads/Essential JavaScript Design Patterns For Beginners - Addy Osmani.mobi" onClick="_gaq.push(['_trackEvent','PDF','Download','AddyOsmaniJavaScriptKindleEBook']); _ictt.push(['_customTrigger', 'DOWNLOAD', {'t':'Addy Osmani JavaScript Kindle eBook'}]);" target="_blank">Download Essential JavaScript and jQuery design patterns for Kindle</a>
 
 It's always worth keeping an eye on Addy's site as the book is frequently updated there, also it's usually a good source of information anyway 
 and Addy has published some interesting article of late.  
