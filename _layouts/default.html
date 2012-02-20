@@ -4,7 +4,8 @@
     <title>{{ page.title }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <meta name="title" content="{{ page.title }}" /> 
-    <meta name="robots" content="index, follow" /> 
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The blog of Chris Sedlmayr about symfony, php, open source technology and real world development" /> 
     <meta name="keywords" content="symfony, php, framework, blog, web, open, source, development" /> 
     <meta name="language" content="en" />
@@ -39,7 +40,8 @@
     <!-- Infinity Tracking Code End -->
 </head>
 <body>
-  <div id="container">
+
+  <div id="container" class="container">
     <header>
         <h1>{{ page.title }}</h1>
         {% if page.ispost %}
