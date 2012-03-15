@@ -25,7 +25,7 @@ One main menu item, with 2 child items
 
 {% highlight php %}
     <?php
-    // create a menu item for the about page
+    // create a menu item for the main about page
     $homepage = new sfNavBuilderItem();
     $homepage
         ->setDisplayName('About Us')
