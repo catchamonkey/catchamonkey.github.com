@@ -121,7 +121,7 @@ $2 is the number of versions left after an uninstall of %{name} has been perform
 
 {% highlight bash %}
 if [ $2 -ge 1 ]; then
-    chown -R apache:apache /home/sites/%{name}/app/cache
+    chown -R apache:apache /home/sites/%{name}/app/cache/build
     mv /home/sites/%{name}/app/cache/build /home/sites/%{name}/app/cache/prod
 fi
 {% endhighlight %}
