@@ -100,7 +100,7 @@ We then move the cache/build directory into it's rightful place in cache/prod
 {% highlight bash %}
 if [ $1 -eq 1 ]; then
     # Grant apache access to it so remaining items can be cached (doctrine annotations)
-    chown -R apache:apache /home/sites/%{name}/app/cache
+    chown -R apache:apache /home/sites/%{name}/app/cache/build
 
     # move the built cache into place
     mv /home/sites/%{name}/app/cache/build /home/sites/%{name}/app/cache/prod
