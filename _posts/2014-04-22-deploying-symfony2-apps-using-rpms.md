@@ -81,7 +81,7 @@ The directory during build for us is ```/home/rpm.private/BUILD/%{name}-%{versio
 Find all the files in cache, then edit them using sed.
 
 {% highlight bash %}
-find app/cache/ -type f | xargs sed -i "s#/home/rpm.private/BUILD/%{name}-%{version}#/home/sites/%{name}#ig"
+find app/cache/ -type f | xargs sed -i "s#%{_builddir}/%{name}-%{version}#/home/sites/%{name}#ig"
 {% endhighlight %}
 
 
