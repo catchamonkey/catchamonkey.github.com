@@ -52,7 +52,7 @@ You could go a step further and only spit out the last 3 parts as that is genera
 Check out the image for the options  
 [![Textmate Command Options](/images/textmateCommand-300x205.jpg)](/images/textmateCommand.jpg)
 
-###Update:
+### Update:
 I've made a version that gives you just the last 3 parts of the path as mentioned above.  
 I have both running on the 'class' tab command so can choose between them as required.
 

@@ -8,17 +8,17 @@ As i am a recent git convert I find myself reading a lot of guides etc on the be
 
 This is an attempt to collate my more useful findings, partly for myself, but it may prove useful for you too.
 
-###Git Books
+### Git Books
 <http://book.git-scm.com/index.html>  
 <http://progit.org/book/>
 
-###Git-SVN Resources
+### Git-SVN Resources
 <http://orestis.gr/blog/2008/08/23/git-svn-tutorial/>
 
-###Full Git online manual
+### Full Git online manual
 <http://www.kernel.org/pub/software/scm/git/docs/v1.7.0.4/git.html>
 
-###Combining multiple git commits into 1 SVN commit  
+### Combining multiple git commits into 1 SVN commit  
 In some cases I use git as a local repo, but the main repo upstream is SVN. This sample enables me to combine multiple local git commits into a single commit back to SVN.
 This was taken from [Stack Overflow](http://stackoverflow.com/questions/1408381/combine-local-git-commits-into-one-commit-with-git-svn "Stack Overflow git commit squashing")
 

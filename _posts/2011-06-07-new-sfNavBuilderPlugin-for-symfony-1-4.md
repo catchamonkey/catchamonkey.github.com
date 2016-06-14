@@ -19,7 +19,7 @@ This therefore allows you to say you want an item to be active if;
     action = show
     a paramName of post_id = a paramValue of 1
 
-###Basic usage example
+### Basic usage example
 
 One main menu item, with 2 child items  
 

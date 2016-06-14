@@ -18,14 +18,14 @@ I've wanted to map the framework: ide: setting in Symfony2 (also works in Symfon
 There is a Sublime package that adds the protocol handler, and from there
  it's actually very easy, once I worked out the file path format required.
 
-##Step 1)
+## Step 1)
 
 Add the bitbucket URL as a repo in Sublime Text 2
 
     ctrl+shift+p
     https://bitbucket.org/sublimator/sublimeprotocol
 
-##Step 2)
+## Step 2)
 
 Then install the package
 
@@ -36,7 +36,7 @@ Choose SublimeProtocol and press enter.
 Note, for this step I had to launch Sublime Text 2 as an administrator due
  to the windows domain rules in the office.
 
-##Step 3)
+## Step 3)
 
 Configure the ide: setting in Symfony2
 

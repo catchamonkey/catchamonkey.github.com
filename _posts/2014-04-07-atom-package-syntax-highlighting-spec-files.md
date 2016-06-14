@@ -17,7 +17,7 @@ Or you can use the apm cli
 apm install language-spec
 {% endhighlight %}
 
-###Why Atom?
+### Why Atom?
 
 I'm not going into a big SublimeText2 vs Atom vs X debate here, I'm playing with it, and I like it.  
 Trying new things is part of what I like about being a developer, and Atom has some nice features built it.

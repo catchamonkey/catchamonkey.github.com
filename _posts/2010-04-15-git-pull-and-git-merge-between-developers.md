@@ -11,10 +11,10 @@ We are using git svn as the bridge between these 2.
 If we want to share code or update each other it was generally the case that we would have to commit everything back to svn (git svn dcommit), then the others would have to rebase.  
 It felt like I was abusing git and not making the most of it.
 
-###Enter git pull
+### Enter git pull
 Git pull allows you to grab code from another git repo and store it in your local repo.
 
-###Git pull
+### Git pull
 I'll presume you already have a git repo locally, and that there is another git repo somewhere you have access to.
 
 First of all we add the remote location.

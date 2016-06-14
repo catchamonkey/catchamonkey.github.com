@@ -1,5 +1,5 @@
-markdown: rdiscount
-pygments: true
+markdown: kramdown
+highlighter: rouge
 permalink: /:year-:month-:day/:title.html
 gems:
-  - jekyll-sitemap
+    - jekyll-sitemap
