@@ -4,7 +4,7 @@ permalink: /feed/
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>Chris Sedlmayr</title>
  <link href="http://chris.sedlmayr.co.uk/feed" rel="self"/>
  <link href="http://chris.sedlmayr.co.uk/"/>
@@ -24,31 +24,4 @@ permalink: /feed/
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- <script type="text/javascript">
-
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-936479-14']);
-   _gaq.push(['_trackPageview']);
-
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-
- </script>
- <!-- Infinity Tracking Code v1.16
-     Copyright Infinity Tracking 2011
-     www.Infinity-Tracking.com -->
- <script type="text/javascript">
-   var _ictt = _ictt || [];
-   _ictt.push(['_setIgrp', '77']);
-   _ictt.push(['_track']);
-   (function() {
-       var ict = document.createElement('script'); ict.type = 'text/javascript'; ict.async = true;
-       ict.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.infinity-tracking.net/nas/js/nas.v1.min.js';
-       var scr = document.getElementsByTagName('script')[0]; scr.parentNode.insertBefore(ict, scr);
-     })();
- </script>
- <!-- Infinity Tracking Code End -->
 </feed>
