@@ -10,9 +10,9 @@ By using curl and xmllint together you can have your response nicely formatted.
 
 To do so, invoke curl, and parse the response through xmllint, giving xmllint the --format option and the - option which tells it to read from stdin
 
-{% highlight sh %}
+```sh
 curl -sL "http://api.example.com/assets.xml" | xmllint --format -
-{% endhighlight %}
+```
 
 The curl options used here are -s to invoke silent mode, and -L so it follows redirects.
 

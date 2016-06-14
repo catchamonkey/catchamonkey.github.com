@@ -22,29 +22,29 @@ To achieve this, we use a homegrown script that pulls from a Git repo, to a spec
 
 This section is pretty straight forward, we use composer to pull down the dependencies of the repo, with the usual flags, but we also disable the scripts at this point.
 
-{% highlight bash %}
+```bash
 composer install --prefer-dist -o -n --no-dev --no-progress --no-scripts
-{% endhighlight %}
+```
 
 ### %build
 
 #### Run the post-install-cmd scripts (cache clear, install assets etc)
 
-{% highlight bash %}
+```bash
 composer run-script post-install-cmd --no-dev --no-interaction
-{% endhighlight %}
+```
 
 #### Update the version used in the asset output scheme
 
-{% highlight bash %}
+```bash
 sed -i -e 's/\(assets_version: v=[ ]*\)\([a-zA-Z0-9_]*\)\(.*\)$/\1%{version}\3/g' app/config/config.yml
-{% endhighlight %}
+```
 
 #### Dump the assets (not done via any registered ScriptHandler)
 
-{% highlight bash %}
+```bash
 app/console assetic:dump --env=prod
-{% endhighlight %}
+```
 
 #### Remove some files not needed in production
 
@@ -52,9 +52,9 @@ Apart from the removal of non-production controllers (```rm web/app_*.php```), y
 
 The parameters.yml file is needed in order to warm the cache and run the post-install-cmd scripts, but the real one is centrally managed on our servers via puppet so we remove it here, you may be managing your config files differently so you may need to mofidy this part.
 
-{% highlight bash %}
+```bash
 rm web/app_*.php composer.* behat.yml phpspec.yml .travis.yml app/config/parameters.yml
-{% endhighlight %}
+```
 
 #### Move the generated cache into a non-standard location
 
@@ -64,9 +64,9 @@ When you install an RPM, the new version of code is put in place, but old files 
 
 This gets around that issue by putting these files into a cache/build directory, and after install (more later), mv'ing them over the cache/prod directory, which is a full OS level dir replace, and is also atomic, this means that you have an (almost) full cache put in place at the right moment, rather than generating the cache in place on your production servers.
 
-{% highlight bash %}
+```bash
 mv app/cache/prod app/cache/build
-{% endhighlight %}
+```
 
 #### Modify the paths written in the cache files
 
@@ -80,9 +80,9 @@ The directory during build for us is ```/home/rpm.private/BUILD/%{name}-%{versio
 
 Find all the files in cache, then edit them using sed.
 
-{% highlight bash %}
+```bash
 find app/cache/ -type f | xargs sed -i "s#%{_builddir}/%{name}-%{version}#/home/sites/%{name}#ig"
-{% endhighlight %}
+```
 
 
 ### %install
@@ -97,7 +97,7 @@ Here we do something a bit different.
 If this is the first installation of this package, then we change ownership of the cache directory to apache as there are still some cache files that are generated during the first request.
 We then move the cache/build directory into it's rightful place in cache/prod
 
-{% highlight bash %}
+```bash
 if [ $1 -eq 1 ]; then
     # Grant apache access to it so remaining items can be cached (doctrine annotations)
     chown -R apache:apache /home/sites/%{name}/app/cache/build
@@ -105,7 +105,7 @@ if [ $1 -eq 1 ]; then
     # move the built cache into place
     mv /home/sites/%{name}/app/cache/build /home/sites/%{name}/app/cache/prod
 fi
-{% endhighlight %}
+```
 
 <strong>Note:</strong> I am looking at removing this writable requirement by warming the rest using the built in PHP web server, and curl during %build. I have already made the code compatible, with this PR on doctrine/annotations. https://github.com/doctrine/annotations/pull/30
 
@@ -119,12 +119,12 @@ $2 is the number of versions left after an uninstall of %{name} has been perform
 
 ```>=1``` means this is an upgrade, anything smaller means a complete removal
 
-{% highlight bash %}
+```bash
 if [ $2 -ge 1 ]; then
     chown -R apache:apache /home/sites/%{name}/app/cache/build
     mv /home/sites/%{name}/app/cache/build /home/sites/%{name}/app/cache/prod
 fi
-{% endhighlight %}
+```
 
 
 ### %post and %triggerpostun

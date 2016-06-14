@@ -13,9 +13,9 @@ You can install it using the built in package manager, just search for Spec, and
 
 Or you can use the apm cli
 
-{% highlight bash %}
+```bash
 apm install language-spec
-{% endhighlight %}
+```
 
 ### Why Atom?
 

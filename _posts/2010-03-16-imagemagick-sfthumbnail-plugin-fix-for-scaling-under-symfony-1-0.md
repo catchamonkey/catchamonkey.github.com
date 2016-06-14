@@ -13,7 +13,7 @@ Once you have installed the plugin, edit the sfImageMagickAdapter.class.php in t
 Change lines 223-237:
 
 From
-{% highlight php %}
+```php
 <?php
 $width  = $this->sourceWidth;
 $height = $this->sourceHeight;
@@ -30,11 +30,11 @@ switch (@$this->options['method']) {
       $y = ceil(($height - $width) / 2);
       $height = $width;
     }
-{% endhighlight %}
+```
 
 
 To
-{% highlight php %}
+```php
 <?php
 $width  = $this->sourceWidth;
 $height = $this->sourceHeight;
@@ -53,6 +53,6 @@ switch (@$this->options['method']) {
       $y = ceil(($height - $width*($mHeight/$mWidth)) / 2);
       $height = $width;
     }
-{% endhighlight %}
+```
 
 It's a straight forward edit so you should be able to see why this simple change has the desired effect, and your images will now behave nicely when scaling.

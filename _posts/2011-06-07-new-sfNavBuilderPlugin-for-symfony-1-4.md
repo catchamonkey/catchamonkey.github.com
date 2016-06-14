@@ -23,7 +23,7 @@ This therefore allows you to say you want an item to be active if;
 
 One main menu item, with 2 child items  
 
-{% highlight php %}
+```php
     <?php
     // create a menu item for the main about page
     $homepage = new sfNavBuilderItem();
@@ -66,7 +66,7 @@ One main menu item, with 2 child items
     // in your template you can then call the renderer
     <?php echo $menu->render(); ?>
     // check out the sfNavBuilderRenderer class to see what this does
-{% endhighlight %}
+```
 
 
 I have included some fuller examples of use within the readme of the project, but am happy to answer question you have when using it.

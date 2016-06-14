@@ -8,7 +8,7 @@ The title says it all so i'll just get on with it.
 
 Create a new textmate command, and set the output to 'Insert as snippet'  
 Paste in the following.
-{% highlight php %}
+```php
 #!/usr/bin/php
 <?php
 $path = $_ENV['TM_FILEPATH'];
@@ -27,7 +27,7 @@ foreach ($parts as $id => $part) {
     }
 }
 ?>
-{% endhighlight %}
+```
 
 And bind to a tab trigger.  
 When you execute from within a file it performs the following.
@@ -42,9 +42,9 @@ Then iterates through the array, creating a textmate snippet placeholder for eac
 
 So for a file that is in the path /The/Full/Path/Filename.php  
 We end up with the resulting snippet of  
-{% highlight php %}
+```php
 ${1:The_}${2:Full_}${3:Path_}${4:Filename}
-{% endhighlight %}
+```
 
 Which then enables you to tab through them and remove those from the start that you don't need.  
 You could go a step further and only spit out the last 3 parts as that is generally how many are needed for a class name. But it really depends on your app structure so I've left it as is for now.  
@@ -56,7 +56,7 @@ Check out the image for the options
 I've made a version that gives you just the last 3 parts of the path as mentioned above.  
 I have both running on the 'class' tab command so can choose between them as required.
 
-{% highlight php %}
+```php
 #!/usr/bin/php
 <?php
 $path = $_ENV['TM_FILEPATH'];
@@ -77,4 +77,4 @@ for($i = 1; $i <= 3; $i++) {
 // pass the snippet to the file
 echo $part_3.$part_2.$part_1;
 ?>
-{% endhighlight %}
+```

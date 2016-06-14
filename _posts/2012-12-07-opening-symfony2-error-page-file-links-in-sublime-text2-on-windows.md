@@ -40,11 +40,11 @@ Note, for this step I had to launch Sublime Text 2 as an administrator due
 
 Configure the ide: setting in Symfony2
 
-{% highlight yaml %}
+```yaml
 #app/config/config.yml
 framework:
     ide:    "sblm:///R/%%f:%%1"
-{% endhighlight %}
+```
 
 In my case, the R drive is mapped to the root of my Dev environment.
 

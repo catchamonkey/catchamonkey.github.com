@@ -22,6 +22,6 @@ The maintainers there have done a great job in the past few years, From my POV, 
 
 I would have no hesitation in recommending it to anyone looking for a decent package manager for OSX, in lieu of the ports tree!
 
-{% highlight bash %}
+```bash
 brew install wget
-{% endhighlight %}
+```

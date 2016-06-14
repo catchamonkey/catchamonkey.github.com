@@ -18,23 +18,23 @@ Git pull allows you to grab code from another git repo and store it in your loca
 I'll presume you already have a git repo locally, and that there is another git repo somewhere you have access to.
 
 First of all we add the remote location.
-{% highlight bash %}
+```bash
 git remote add mp git.user@mpdevbox:/www/cm/
-{% endhighlight %}
+```
 Let me break that command down
 
-{% highlight bash %}
+```bash
 git remote add = The git command
 mp = A friendly name you use for this remote location
 git.user@mpdevbox = the remote user and the remote location
 :/www/cm = The path to the remote git repo, (note the colon)
-{% endhighlight %}
+```
 
 Having completed that command you now have a reference to a remote git repo, If you want to pull the code down from it, it's simple (you may want to create and checkout a branch before you do so, depending on your needs. I won't so will just pull)
 
-{% highlight bash %}
+```bash
 git pull mp master
-{% endhighlight %}
+```
 
 Where master is the name of your local branch you want to pull into.
 
@@ -43,9 +43,9 @@ This will pull down the code from the remote branch and merge it into your branc
 If there are conflicts that git fails to resolve automatically then you will need to resolve them manually.  
 This can be easily done using mergetool  
 
-{% highlight bash %}
+```bash
 git mergetool
-{% endhighlight %}
+```
 
 and follow the instructions.  
 
