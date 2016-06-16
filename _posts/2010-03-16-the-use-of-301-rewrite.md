@@ -16,16 +16,19 @@ We use a RewriteRule so that whatever is after the domain itself (in this case s
 It is very simple to achieve this.
 
 Within you VirtualHost entry you need to specify a ServerAlias. So I would have
+
 ```conf
 ServerName www.sedlmayr.co.uk
 ServerAlias sedlmayr.co.uk
 ```
+
 And then within the vhost file for your project you would have
 
 ```conf
 RewriteCond %{HTTP_HOST} ^sedlmayr\.co.uk
 RewriteRule ^(.*)$ http://www.sedlmayr.co.uk/$1 [R=301,L]
 ```
+
 Which needs to go at the top.
 That's it!
 Hope this is helpful to you at some point.
