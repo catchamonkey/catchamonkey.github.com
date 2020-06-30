@@ -10,7 +10,7 @@ excerpt: How I fixed Keyboard Type on macOS when the preferences pane had no suc
 I recently purchased a new keyboard to use in all scenarios, both across windows
 (gaming), and macOS, work (inc. programming).
 
-Everytthing was great for the weeks that followed getting it, fantastic
+Everything was great for the weeks that followed getting it, fantastic
 keyboard, lovely to type on, nice click-clack sounds (<3 cherry mx blue).
 
 ![Corsair K95 RGB Platinum XT](/images/corsair-k95-rgb-platinum-xt.jpg)
